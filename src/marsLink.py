@@ -23,4 +23,6 @@ class MarsLink:
         self._socket.send(bytes(instructions.linkFormat(), "utf-8"))
 
         message = self._socket.recv(1024).decode()
+        print(f"Response from mars : {message}")
+
         return RoverMessage(value=message)
