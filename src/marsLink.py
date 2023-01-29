@@ -11,6 +11,7 @@ class MarsLink:
     def __enter__(self) -> 'MarsLink':
         self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self._socket.connect((self._ip, self._port))
+        print("Connexion établie avec le rover")
 
         return self
 
